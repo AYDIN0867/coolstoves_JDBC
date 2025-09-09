@@ -52,15 +52,43 @@ Statement statement=connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE
 
        ResultSet resultSet= statement.executeQuery(QUERY);
 
+//5. ADIM sonucları işleme...
 
+        //suanda user tablosundaki tum datalar resultSet 'in içerisinde ITERATOR ile veriler alınır...
 
+       resultSet.next();
+        System.out.println(resultSet.getString("firstname"));
+//Elf
 
+        resultSet.next();
+        System.out.println(resultSet.getString(2)); //Test
+
+        resultSet.next();
+        resultSet.next();
+        resultSet.next();
+        resultSet.next();
+        resultSet.next();
+        resultSet.next();
+        resultSet.next();
+        System.out.println(resultSet.getString(3)); //EZO
+
+        System.out.println(resultSet.getInt(1));//11
+
+        resultSet.previous();
+        System.out.println(resultSet.getString("email")); //jordanmabally4@gmail.com
+
+         resultSet.first();
+        System.out.println(resultSet.getString("email"));//elff931@gmail.com
+
+        resultSet.absolute(10);
+        System.out.println(resultSet.getString(3));//Salvador absolute ile istenilen satıra gidilir....
+
+        resultSet.beforeFirst();
+        resultSet.isAfterLast();
+        resultSet.isBeforeFirst();
 
 
 
     }
-
-
-
 
 }
