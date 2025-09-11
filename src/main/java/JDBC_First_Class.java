@@ -88,6 +88,12 @@ Statement statement=connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE
         resultSet.isBeforeFirst();
 
 
+        //6. ADIM KAPATMA...
+
+
+        resultSet.close();
+        statement.close();
+        connection.close();
 
     }
 
