@@ -34,6 +34,12 @@
             <version>7.20.1</version>
         </dependency>
         <!-- cucumber ile testNg versiyonlarının aynı olmasına dikkate edelim.... -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 
